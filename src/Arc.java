@@ -9,6 +9,9 @@ public abstract class Arc {
 		this.poids=w;
 		this.transition=t;
 	}
+	public Arc(Place p, Transition t) {
+		this(1, p, t);
+	}
 	public int getPoids() {
 		return this.poids;
 	}

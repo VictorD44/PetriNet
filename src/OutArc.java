@@ -1,4 +1,3 @@
-
 public class OutArc extends Arc{
 
 	public OutArc(int w, Place p, Transition t) {

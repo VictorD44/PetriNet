@@ -1,13 +1,12 @@
-
 public abstract class Arc {
 	private int poids;
 	private Place place;
 	private Transition transition;
 	
 	public Arc(int w, Place p, Transition t) {
-		this.place=p;
-		this.poids=w;
-		this.transition=t;
+		this.place = p;
+		this.poids = w;
+		this.transition = t;
 	}
 	public Arc(Place p, Transition t) {
 		this(1, p, t);
@@ -16,7 +15,7 @@ public abstract class Arc {
 		return this.poids;
 	}
 	public void setPoids(int p) {
-		this.poids=p;
+		this.poids = p;
 	}
 	public abstract void step();
 	

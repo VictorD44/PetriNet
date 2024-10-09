@@ -6,9 +6,9 @@ public class PetriNet {
 	private ArrayList<Transition> transitions;
 	
 	public PetriNet() {
-		this.arcs= new ArrayList<Arc>();
-		this.places=new ArrayList<Place>();
-		this.transitions=new ArrayList<Transition>();
+		this.arcs = new ArrayList<Arc>();
+		this.places = new ArrayList<Place>();
+		this.transitions = new ArrayList<Transition>();
 	}
 	
 	/**

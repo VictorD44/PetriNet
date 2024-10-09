@@ -8,6 +8,9 @@ public class InArc extends Arc{
 	@Override
 	public void step() {
 		// TODO Auto-generated method stub
+		if (this.canStep()) {
+			this.getPlace().removeJetons(this.getPoids());
+		}
 	}
 
 }

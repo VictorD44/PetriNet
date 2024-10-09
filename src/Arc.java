@@ -10,4 +10,12 @@ public abstract class Arc {
 	public void setPoids(int p) {
 		this.poids=p;
 	}
+	public abstract void step();
+	
+	public Place getPlace() {
+		return this.place;
+	}
+	public Transition getTransition() {
+		return this.transition;
+	}
 }

@@ -12,10 +12,10 @@ public class Place {
  	public void setTokens(int n) {
  		this.tokens=n;
  	}
- 	public void addJetons(int n) {
+ 	public void addTokens(int n) {
  		this.setTokens(this.getTokens()+n);
  	}
- 	public void removeJetons(int n) {
+ 	public void removeTokens(int n) {
  		this.setTokens(Math.max(this.getTokens()-n,0));
  	}
 }

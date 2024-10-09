@@ -7,7 +7,7 @@ public class OutArc extends Arc{
 
 	@Override
 	public void step() {
-		this.getPlace().addJetons(this.getPoids());
+		this.getPlace().addTokens(this.getPoids());
 	}
 
 }

@@ -21,6 +21,7 @@ public class PetriNet {
 		this.places = places;
 		this.transitions = transitions;
 	}
+	
 	public void addPlace(Place p) {
 		this.places.add(p);
 	}
@@ -40,7 +41,15 @@ public class PetriNet {
 		this.transitions.remove(t);
 	}
 	
-	public void tirer(Transition t) {
+	public void pull(Transition t) {
 		t.step();
+	}
+	
+	public static void main(String[] args) {
+		PetriNet petri = new PetriNet();
+		Place p1 = new Place(4);
+		Place p2 = new Place(1);
+		Transition t = new Transition();
+		
 	}
 }

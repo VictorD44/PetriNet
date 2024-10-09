@@ -40,4 +40,7 @@ public class PetriNet {
 		this.transitions.remove(t);
 	}
 	
+	public void tirer(Transition t) {
+		t.step();
+	}
 }

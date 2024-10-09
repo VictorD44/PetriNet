@@ -18,4 +18,18 @@ public class Transition {
 			this.arcsSortants.add(a);
 		}
 	}
+	public void step() {
+		boolean res = true;
+		for (InArc a : this.arcsEntrants) {
+			res &= a.canStep();
+		}
+		if (res) {
+			for (InArc a : this.arcsEntrants) {
+				a.step();
+			}
+			for (OutArc a : this.arcsSortants) {
+				a.step();
+			}
+		}
+	}
 }

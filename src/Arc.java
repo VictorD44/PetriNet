@@ -4,6 +4,11 @@ public abstract class Arc {
 	private Place place;
 	private Transition transition;
 	
+	public Arc(int w, Place p, Transition t) {
+		this.place=p;
+		this.poids=w;
+		this.transition=t;
+	}
 	public int getPoids() {
 		return this.poids;
 	}

@@ -50,6 +50,14 @@ public class PetriNet {
 		Place p1 = new Place(4);
 		Place p2 = new Place(1);
 		Transition t = new Transition();
-		
+		Arc a1 = new InArc(1,p1,t);
+		Arc a2 = new OutArc(2,p2,t);
+		t.addInArc((InArc)a1);
+		t.addOutArc((OutArc)a2);
+		petri.addArc(a1);
+		petri.addArc(a2);
+		petri.addPlace(p2);
+		petri.addPlace(p1);
+		petri.addTransition(t);
 	}
 }

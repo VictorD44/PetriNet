@@ -14,4 +14,14 @@ public class PetriNet {
 	public void addTransition(Transition t) {
 		this.transitions.add(t);
 	}
+	public void removePlace(Place p) {
+		this.places.remove(p);
+	}
+	public void removeArc(Arc a) {
+		this.arcs.remove(a);
+	}
+	public void removeTransition(Transition t) {
+		this.transitions.remove(t);
+	}
+	
 }

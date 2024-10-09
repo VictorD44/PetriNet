@@ -1,4 +1,4 @@
 
-public class Videur {
+public class Videur extends InArc{
 
 }

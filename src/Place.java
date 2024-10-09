@@ -1,17 +1,21 @@
 
 public class Place {
-	private int jetons;
+	private int tokens;
+	
+	public Place(int jetons) {
+		
+	}
  
- 	public int getJetons() {
- 		return this.jetons;
+ 	public int getTokens() {
+ 		return this.tokens;
  	}
- 	public void setJetons(int n) {
- 		this.jetons=n;
+ 	public void setTokens(int n) {
+ 		this.tokens=n;
  	}
  	public void addJetons(int n) {
- 		this.setJetons(this.getJetons()+n);
+ 		this.setTokens(this.getTokens()+n);
  	}
  	public void removeJetons(int n) {
- 		this.setJetons(Math.max(this.getJetons()-n,0));
+ 		this.setTokens(Math.max(this.getTokens()-n,0));
  	}
 }

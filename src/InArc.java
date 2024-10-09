@@ -1,4 +1,4 @@
 
-public class InArc {
+public class InArc extends Arc{
 
 }

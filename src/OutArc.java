@@ -1,4 +1,4 @@
 
-public class OutArc {
+public class OutArc extends Arc{
 
 }

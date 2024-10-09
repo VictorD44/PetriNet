@@ -2,8 +2,8 @@
 public class Place {
 	private int tokens;
 	
-	public Place(int jetons) {
-		
+	public Place(int tokens) {
+		this.tokens=tokens;
 	}
  
  	public int getTokens() {

@@ -1,14 +1,14 @@
 /**
  * Class that extends InArc and represents an arc who remove all tokens from its place if there is at least one token
  */
-public class Videur extends InArc{
+public class Void extends InArc{
 	
 	/**
 	 * Constructor of the class
 	 * @param p (the place of the arc)
 	 * @param t (the transition of the transition)
 	 */
-	public Videur(Place p, Transition t) {
+	public Void(Place p, Transition t) {
 		super(0, p, t); //we set the weight of the arc at 0 by convention but this is never used
 	}
 

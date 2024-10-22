@@ -65,3 +65,4 @@ public abstract class Arc {
 		return this.transition;
 	}
 }
+

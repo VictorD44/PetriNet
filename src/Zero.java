@@ -1,11 +1,24 @@
+/**
+ * Class that extends InArc and represents an arc that can make a step if there a no token on its place
+ * We do not have to redefine step() because it is the same method
+ */
 public class Zero extends InArc{
 	
+	/**
+	 * Constructor of the zero arc
+	 * @param p (place of the arc)
+	 * @param t (place of the transition)
+	 */
 	public Zero(Place p, Transition t) {
-		super(0, p, t);
+		super(0, p, t); //we set the weight of the arc at 0 by convention but this is never used
 	}
 
+	/**
+	 * Method that check if it is possible to make a step for this arc
+	 * @return a boolean that answer to this
+	 */
 	@Override
 	public boolean canStep() {
-		return this.getPlace().getTokens() == 0;
+		return this.getPlace().getTokens() == 0; //if there is no token, we can make a step
 	}
 }

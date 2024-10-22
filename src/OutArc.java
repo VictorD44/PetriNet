@@ -10,12 +10,13 @@ public class OutArc extends Arc{
 	 * @param t (transition of the arc)
 	 */
 	public OutArc(int w, Place p, Transition t) {
-		super(w, p, t);
+		super(w, p, t); //the require for the weight is checked in super
 	}
 
 	/**
 	 * Method to make a step for its place when pulling a transition
 	 * OutArc implements it to add as much tokens to its place than its weight
+	 * @invariant this.weight > min_weight
 	 */
 	@Override
 	public void step() {

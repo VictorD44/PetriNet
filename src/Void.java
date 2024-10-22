@@ -9,7 +9,7 @@ public class Void extends InArc{
 	 * @param t (the transition of the transition)
 	 */
 	public Void(Place p, Transition t) {
-		super(0, p, t); //we set the weight of the arc at 0 by convention but this is never used
+		super(1, p, t); //we set the weight of the arc at 1 by convention but this is never used
 	}
 
 	/**
@@ -23,9 +23,11 @@ public class Void extends InArc{
 	
 	/**
 	 * Method that make a step for this arc
+	 * @ensures there are no tokens left
 	 */
 	@Override
 	public void step() {
 		this.getPlace().setTokens(0); //we remove all tokens from the place
+		assert(this.getPlace().getTokens() == 0);
 	}
 }

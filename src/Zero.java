@@ -10,7 +10,7 @@ public class Zero extends InArc{
 	 * @param t (place of the transition)
 	 */
 	public Zero(Place p, Transition t) {
-		super(0, p, t); //we set the weight of the arc at 0 by convention but this is never used
+		super(1, p, t); //we set the weight of the arc at 1 by convention but this is never used
 	}
 
 	/**

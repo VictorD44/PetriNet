@@ -19,21 +19,27 @@ public class Transition {
 	/**
 	 * Method to add an InArc to the transition
 	 * @param a (InArc)
+	 * @requires a.getTransition() == this
+	 * @ensures inArc = \old(inArc) with a added
 	 */
 	public void addInArc(InArc a) {
-		if (a.getTransition() == this) { //we check if information match between this and a
-			this.inArc.add(a);
+		if (a.getTransition() != this) { //we check if information match between this and a
+			throw new IllegalArgumentException("this arc does not enter in this transition");
 		}
+		this.inArc.add(a);
 	}
 	
 	/**
 	 * Method to add an OutArc to the transition
 	 * @param a (OutArc)
+	 * @requiresa.getTransition() == this
+	 * @ensures outArc = \old(outArc) with a added
 	 */
 	public void addOutArc(OutArc a) {
-		if (a.getTransition() == this) { //we check if information match between this and a
-			this.outArc.add(a);
+		if (a.getTransition() != this) { //we check if information match between this and a
+			throw new IllegalArgumentException("this arc does not left from this transition");
 		}
+		this.outArc.add(a);
 	}
 	
 	/**

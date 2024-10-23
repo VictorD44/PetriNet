@@ -21,4 +21,11 @@ public class Zero extends InArc{
 	public boolean canStep() {
 		return this.getPlace().getTokens() == 0; //if there is no token, we can make a step
 	}
+	
+	/**
+	 * Method that make a step (for a zero arc, it does nothing)
+	 */
+	@Override
+	public void step() {
+	}
 }

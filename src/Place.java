@@ -33,7 +33,7 @@ public class Place {
  	 * @requires tokens >= min_token
  	 */
  	public void setTokens(int tokens) {
- 		if (tokens >= min_token) {
+ 		if (tokens < min_token) {
  			throw new IllegalArgumentException("the number of tokens must be positive");
  		}
  		this.tokens = tokens;
@@ -45,7 +45,7 @@ public class Place {
  	 * @requires tokens_added >= 0
  	 */
  	public void addTokens(int tokens_added) {
- 		if (tokens_added >= 0) { //tokens_added has to be positive because if it is negative we should use removeTokens(int)
+ 		if (tokens_added < 0) { //tokens_added has to be positive because if it is negative we should use removeTokens(int)
  			throw new IllegalArgumentException("the number of tokens added must be positive");
  		}
  		this.setTokens(this.getTokens()+tokens_added);

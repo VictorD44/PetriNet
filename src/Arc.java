@@ -2,7 +2,7 @@
  * Abstract class that represents an arc (in general without considering in/out/zero/void)
  */
 public abstract class Arc {
-	protected int min_weight = 0; //minimum weight for an arc in general
+	public static final int MIN_WEIGHT = 0; //minimum weight for an arc in general
 	private int weight; //weight of the arc
 	private Place place; //place of the arc
 	private Transition transition; //transition of the arc
@@ -15,7 +15,7 @@ public abstract class Arc {
 	 * @requires w > min_weight
 	 */
 	public Arc(int w, Place p, Transition t) {
-		if (w <= min_weight) {
+		if (w <= MIN_WEIGHT) {
 			throw new IllegalArgumentException("the weight must be straight positive");
 		}
 		this.place = p;
@@ -29,7 +29,7 @@ public abstract class Arc {
 	 * @requires weight > min_weight
 	 */
 	public int getWeight() {
-		assert(this.weight > min_weight);
+		assert(this.weight > MIN_WEIGHT);
 		return this.weight;
 	}
 	
@@ -39,7 +39,7 @@ public abstract class Arc {
 	 * @requires w >= min_weight
 	 */
 	public void setWeight(int w) {
-		if (w <= min_weight) {
+		if (w <= MIN_WEIGHT) {
 			throw new IllegalArgumentException("the weight must be straight positive");
 		}
 		this.weight = w;

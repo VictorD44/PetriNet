@@ -3,15 +3,14 @@
  */
 public class Place {
 	private int tokens; //Tokens of the place
-	private int min_token;
-	
+	public static final int MIN_TOKEN = 0;	
 	/**
 	 * Constructor of the place
 	 * @param tokens
 	 * @requires tokens >= min_token
 	 */
 	public Place(int tokens) {
-		if (tokens < min_token) {
+		if (tokens < MIN_TOKEN) {
 			throw new IllegalArgumentException("the number of tokens must be positive");
 		}
 		this.tokens = tokens;
@@ -23,7 +22,7 @@ public class Place {
 	 * @ensures tokens >= min_token
 	 */
  	public int getTokens() {
- 		assert(this.tokens >= min_token);
+ 		assert(this.tokens >= MIN_TOKEN);
  		return this.tokens;
  	}
  	
@@ -33,7 +32,7 @@ public class Place {
  	 * @requires tokens >= min_token
  	 */
  	public void setTokens(int tokens) {
- 		if (tokens < min_token) {
+ 		if (tokens < MIN_TOKEN) {
  			throw new IllegalArgumentException("the number of tokens must be positive");
  		}
  		this.tokens = tokens;
@@ -62,6 +61,6 @@ public class Place {
  			throw new IllegalArgumentException("there are not enough tokens in this place to remove this much tokens");
  		}
  		this.setTokens(this.getTokens()-tokens_removed);
- 		assert(this.tokens >= min_token);
+ 		assert(this.tokens >= MIN_TOKEN);
  	}
 }

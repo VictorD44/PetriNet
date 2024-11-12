@@ -1,28 +1,28 @@
 package test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class TestTransition {
+class TestTransition {
 
 	@Test
-	public void testTransition() {
+	void testTransition() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testAddInArc() {
+	void testAddInArc() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testAddOutArc() {
+	void testAddOutArc() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testStep() {
+	void testStep() {
 		fail("Not yet implemented");
 	}
 

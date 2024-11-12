@@ -1,38 +1,38 @@
 package test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class TestArc {
+class TestArc {
 
 	@Test
-	public void testArc() {
+	void testArc() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testGetWeight() {
+	void testGetWeight() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testSetWeight() {
+	void testSetWeight() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testStep() {
+	void testStep() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testGetPlace() {
+	void testGetPlace() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testGetTransition() {
+	void testGetTransition() {
 		fail("Not yet implemented");
 	}
 

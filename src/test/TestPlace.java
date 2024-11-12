@@ -1,33 +1,34 @@
 package test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
-public class TestPlace {
-
+class TestPlace {
+	
 	@Test
-	public void testPlace() {
+	void testPlace() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testGetTokens() {
+	void testGetTokens() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testSetTokens() {
+	void testSetTokens() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testAddTokens() {
+	void testAddTokens() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	public void testRemoveTokens() {
+	void testRemoveTokens() {
 		fail("Not yet implemented");
 	}
 

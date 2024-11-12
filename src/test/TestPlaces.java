@@ -1,14 +1,16 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class TestPlace {
-	
+import classesPetriNet.Place;
+
+class TestPlaces {
+
 	@Test
 	void testPlace() {
-		Place p = new Place(2);
+		Place p = new Place(3);
 		fail("Not yet implemented");
 	}
 

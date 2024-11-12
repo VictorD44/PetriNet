@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import classesPetriNet.*;
 
 class TestArc {
-
+	Place p = new Place(50);
 	@Test
 	void testArc() {
 		fail("Not yet implemented");

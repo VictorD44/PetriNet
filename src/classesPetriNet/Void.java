@@ -1,3 +1,4 @@
+package classesPetriNet;
 /**
  * Class that extends InArc and represents an arc who remove all tokens from its place if there is at least one token
  */

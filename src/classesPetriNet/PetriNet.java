@@ -1,3 +1,4 @@
+package classesPetriNet;
 import java.util.ArrayList;
 
 /**

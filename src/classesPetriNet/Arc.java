@@ -1,3 +1,4 @@
+package classesPetriNet;
 /**
  * Abstract class that represents an arc (in general without considering in/out/zero/void)
  */

@@ -1,3 +1,4 @@
+package classesPetriNet;
 /**
  * Class that extends Arc and represents an in-arc (an arc who go from a place to a transition)
  */

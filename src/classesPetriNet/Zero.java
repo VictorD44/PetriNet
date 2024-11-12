@@ -1,3 +1,4 @@
+package classesPetriNet;
 /**
  * Class that extends InArc and represents an arc that can make a step if there a no token on its place
  * We do not have to redefine step() because it is the same method

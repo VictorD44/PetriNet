@@ -1,3 +1,4 @@
+package classesPetriNet;
 /**
  * Class that represents a place
  */

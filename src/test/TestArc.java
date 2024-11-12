@@ -6,7 +6,13 @@ import org.junit.jupiter.api.Test;
 import classesPetriNet.*;
 
 class TestArc {
-	Place p = new Place(50);
+	Place p1 = new Place(2);
+	Place p2 = new Place(0);
+	Transition t = new Transition();
+	Arc a1 = new InArc(1,p1,t);
+	Arc a2 = new OutArc(2,p2,t);
+	
+	
 	@Test
 	void testArc() {
 		fail("Not yet implemented");

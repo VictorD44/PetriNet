@@ -7,31 +7,41 @@ import org.junit.jupiter.api.Test;
 import classesPetriNet.Place;
 
 class TestPlaces {
+	Place p1 = new Place(3);
 
 	@Test
 	void testPlace() {
-		Place p = new Place(3);
-		fail("Not yet implemented");
+		
+		assertThrows(IllegalArgumentException.class,()->new Place(-2));
 	}
 
 	@Test
 	void testGetTokens() {
-		fail("Not yet implemented");
+		assertEquals(3, p1.getTokens());;
+		assertDoesNotThrow(()->p1.getTokens());
+
 	}
 
 	@Test
 	void testSetTokens() {
-		fail("Not yet implemented");
+		p1.setTokens(7);
+		assertEquals(7,p1.getTokens());
+		assertThrows(IllegalArgumentException.class,()->p1.setTokens(-2));
 	}
 
 	@Test
 	void testAddTokens() {
-		fail("Not yet implemented");
+		p1.addTokens(1);
+		assertEquals(4,p1.getTokens());
+		assertThrows(IllegalArgumentException.class,()->p1.addTokens(-2));
+
 	}
 
 	@Test
 	void testRemoveTokens() {
-		fail("Not yet implemented");
+		p1.removeTokens(1);
+		assertEquals(2,p1.getTokens());
+		assertThrows(IllegalArgumentException.class,()->p1.removeTokens(10));
 	}
 
 }

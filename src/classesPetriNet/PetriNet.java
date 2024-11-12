@@ -25,13 +25,14 @@ public class PetriNet {
 	 * @param transitions (list of petrinet's transitions)
 	 */
 	public PetriNet(ArrayList<Arc> arcs, ArrayList<Place> places, ArrayList<Transition> transitions) {
+		//we check if we are 2 same arcs
 		boolean test = false;
 		int Q;
 		for (Arc a1 : arcs) {
 			Q = 0;
 			for (Arc a2 : arcs) {
 				if (a1.equals(a2)) {
-					if (Q != 0) {
+					if (Q != 0) { //it is normal to see 2 times the same arc in the same set, but not more
 						throw new IllegalArgumentException("it is not possible to have 2 times the same arc in the PetriNet");
 					} else {
 						Q += 1;
@@ -68,7 +69,7 @@ public class PetriNet {
 			throw new IllegalArgumentException("this arc is already in the PetriNet");
 		} else {
 			boolean test = true;
-			for (Arc arc : arcs) {
+			for (Arc arc : arcs) { //we check if this arc is already in the petrinet in another instance
 				test &= !a.equals(arc);
 			}
 			if (test) {

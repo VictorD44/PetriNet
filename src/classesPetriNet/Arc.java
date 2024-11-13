@@ -59,13 +59,26 @@ public abstract class Arc {
 	public Place getPlace() {
 		return this.place;
 	}
-	
+
 	/**
 	 * Setter for the transition
 	 * @return transition (of the arc)
 	 */
 	public Transition getTransition() {
 		return this.transition;
+	}
+	
+	public boolean equals(Object o) {
+		if (this instanceof InArc && o instanceof InArc) {
+			if (this.getPlace() == ((InArc)o).getPlace() && this.getTransition() == ((InArc)o).getTransition()) {
+				return true;
+			}
+		} else if (this instanceof OutArc && o instanceof OutArc) {
+			if (this.getPlace() == ((OutArc)o).getPlace() && this.getTransition() == ((OutArc)o).getTransition()) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
 

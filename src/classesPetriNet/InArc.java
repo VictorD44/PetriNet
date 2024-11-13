@@ -22,7 +22,7 @@ public class InArc extends Arc{
 	 */
 	public boolean canStep() {
 		//if there are more tokens on the place than the transition's weight, we can make a step
-		return this.getWeight() < this.getPlace().getTokens(); 
+		return this.getWeight() <= this.getPlace().getTokens(); 
 	}
 	
 	/**

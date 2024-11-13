@@ -20,6 +20,7 @@ class TestPlaces {
 		assertEquals(3, p1.getTokens());;
 		//*assertDoesNotThrow(()->p1.getTokens());
 
+
 	}
 
 	@Test

@@ -18,7 +18,7 @@ class TestPlaces {
 	@Test
 	void testGetTokens() {
 		assertEquals(3, p1.getTokens());;
-		//*assertDoesNotThrow(()->p1.getTokens());
+		assertDoesNotThrow(()->p1.getTokens());
 
 
 	}

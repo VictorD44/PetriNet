@@ -4,28 +4,38 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import classesPetriNet.*;
+import classesPetriNet.Void;
 
 class TestArc {
 	Place p1 = new Place(2);
 	Place p2 = new Place(0);
+	Place p3 = new Place(5);
+	Place p4 = new Place(1);
+	Place p5 = new Place(3);
 	Transition t = new Transition();
 	Arc a1 = new InArc(1,p1,t);
 	Arc a2 = new OutArc(2,p2,t);
+	Arc a0 = new Zero(p3, t);
+	Arc av = new Void(p1, t);
 	
 	
 	@Test
 	void testArc() {
-		fail("Not yet implemented");
+		assertDoesNotThrow(()->new InArc(1,p5,t));
+		assertThrows(IllegalArgumentException.class, ()->new InArc(-1,p5,t));
 	}
 
 	@Test
 	void testGetWeight() {
-		fail("Not yet implemented");
+		assertEquals(2,a2.getWeight());
 	}
 
 	@Test
 	void testSetWeight() {
-		fail("Not yet implemented");
+		a1.setWeight(4);
+		assertEquals(4,a1.getWeight());
+		assertThrows(IllegalArgumentException.class, ()->a1.setWeight(-1));
+
 	}
 
 	@Test
@@ -35,12 +45,25 @@ class TestArc {
 
 	@Test
 	void testGetPlace() {
-		fail("Not yet implemented");
+		assertEquals(p1,a1.getPlace());
 	}
 
 	@Test
 	void testGetTransition() {
-		fail("Not yet implemented");
+		assertEquals(t,a1.getTransition());
+	}
+	
+	@Test
+	void testEquals() {
+		assertEquals(true,a1.equals(av));
+	}
+	
+	@Test
+	void testCanStep() {
+		assertEquals(true,((InArc)a1).canStep());
+		assertEquals(true,((InArc)av).canStep());
+		assertEquals(false,((InArc)a0).canStep());
+
 	}
 
 }

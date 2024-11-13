@@ -13,10 +13,10 @@ class TestArc {
 	Place p4 = new Place(1);
 	Place p5 = new Place(3);
 	Transition t = new Transition();
-	Arc a1 = new InArc(1,p1,t);
-	Arc a2 = new OutArc(2,p2,t);
-	Arc a0 = new Zero(p3, t);
-	Arc av = new Void(p1, t);
+	InArc a1 = new InArc(1,p1,t);
+	OutArc a2 = new OutArc(2,p2,t);
+	InArc a0 = new Zero(p3, t);
+	InArc av = new Void(p1, t);
 	
 	
 	@Test
@@ -40,6 +40,10 @@ class TestArc {
 
 	@Test
 	void testStep() {
+		t.addInArc(a1);
+		t.addOutArc(a2);
+		t.addInArc(new Void(p2,t));
+		t.addInArc(a0);
 		fail("Not yet implemented");
 	}
 
@@ -60,9 +64,9 @@ class TestArc {
 	
 	@Test
 	void testCanStep() {
-		assertEquals(true,((InArc)a1).canStep());
-		assertEquals(true,((InArc)av).canStep());
-		assertEquals(false,((InArc)a0).canStep());
+		assertEquals(true,a1.canStep());
+		assertEquals(true,av.canStep());
+		assertEquals(false,a0.canStep());
 
 	}
 

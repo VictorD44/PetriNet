@@ -10,18 +10,21 @@ import org.pneditor.petrinet.UnimplementedCaseException;
 import org.pneditor.petrinet.models.imta.PetriNet;
 
 public class AdapterPetriNet extends PetriNetInterface {
+	private PetriNet petrinet = new PetriNet();
 	
 	@Override
 	public AbstractPlace addPlace() {
 		AdapterPlace place = new AdapterPlace(null);
+		petrinet.addPlace(place.getPlace());
 		return place;
 		
 	}
 
 	@Override
 	public AbstractTransition addTransition() {
-		// TODO Auto-generated method stub
-		return null;
+		AdapterTransition transition = new AdapterTransition(null);
+		petrinet.addTransition(transition.getTransition());
+		return transition;
 	}
 
 	@Override
@@ -46,13 +49,12 @@ public class AdapterPetriNet extends PetriNetInterface {
 
 	@Override
 	public void removePlace(AbstractPlace place) {
-		// TODO Auto-generated method stub
-		
+		petrinet.removePlace(((AdapterPlace)place).getPlace());
 	}
 
 	@Override
 	public void removeTransition(AbstractTransition transition) {
-		// TODO Auto-generated method stub
+		petrinet.removeTransition(((AdapterTransition)transition).getTransition());
 		
 	}
 
@@ -64,14 +66,12 @@ public class AdapterPetriNet extends PetriNetInterface {
 
 	@Override
 	public boolean isEnabled(AbstractTransition transition) throws ResetArcMultiplicityException {
-		// TODO Auto-generated method stub
-		return false;
+		return ((AdapterTransition)transition).getTransition().canStep();
 	}
 
 	@Override
 	public void fire(AbstractTransition transition) throws ResetArcMultiplicityException {
-		// TODO Auto-generated method stub
-		
+		petrinet.pull(((AdapterTransition)transition).getTransition());
 	}
 
 }

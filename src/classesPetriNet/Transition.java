@@ -1,6 +1,8 @@
 package classesPetriNet;
 import java.util.ArrayList;
 
+import org.pneditor.petrinet.models.imta.InArc;
+
 /**
  * Class that represents a transition
  */
@@ -61,5 +63,17 @@ public class Transition {
 				a.step();
 			}
 		}
+	}
+	
+	/**
+	 * Method that return if the transition can step
+	 * @return boolean (is trigeable)
+	 */
+	public boolean canStep() {
+		boolean res = true;
+		for (InArc a : this.inArc) {
+			res &= a.canStep();
+		}
+		return res;
 	}
 }

@@ -1,3 +1,18 @@
+# Fil Rouge MAPD
+
+Implementation of a Petri Net
+
+## Authors
+
+Arthur LOIZEAU
+
+Victor DANTAS
+
+## Tests
+
+In order to run the tests, you can execute the different classes in the **src.test** package as JUnit Test
+
+
 Code implémentant un réseau de Pétri.
 Pour l'exécuter, il faut lancer la classe PetriNet en construisant le réseau dans le main grâce aux diverses méthodes de PetriNet et des classes des objets (Transition, Place, Arc...).
 Ce code fonctionne avec eclipse 4.33.0 sous JRE build 17.0.13

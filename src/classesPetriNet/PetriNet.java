@@ -137,6 +137,13 @@ public class PetriNet {
 		if (!this.transitions.contains(t)) {
 			throw new IllegalArgumentException("this transition is not in the PetriNet");
 		}
+		ArrayList<Arc> newArcs = new ArrayList<Arc>();
+		for (Arc a:this.arcs) {
+			if (a.getTransition()!=t) {
+				newArcs.add(a);
+			}
+		}
+		this.arcs=newArcs;
 		this.transitions.remove(t);
 	}
 	

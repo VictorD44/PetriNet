@@ -103,6 +103,13 @@ public class PetriNet {
 		if (!this.places.contains(p)) {
 			throw new IllegalArgumentException("this place is not in the PetriNet");
 		}
+		ArrayList<Arc> newArcs = new ArrayList<Arc>();
+		for (Arc a:this.arcs) {
+			if (a.getPlace()!=p) {
+				newArcs.add(a);
+			}
+		}
+		this.arcs=newArcs;
 		this.places.remove(p);
 	}
 	
@@ -116,6 +123,7 @@ public class PetriNet {
 		if (!this.arcs.contains(a)) {
 			throw new IllegalArgumentException("this arc in not in the PetriNet");
 		}
+		
 		this.arcs.remove(a);
 	}
 	

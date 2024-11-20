@@ -4,7 +4,7 @@ import org.pneditor.petrinet.AbstractPlace;
 import org.pneditor.petrinet.models.imta.Place;
 
 public class AdapterPlace extends AbstractPlace {
-	Place place;
+	private Place place;
 	
 	public AdapterPlace(String label) {
 		super(label);

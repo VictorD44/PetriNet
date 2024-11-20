@@ -4,47 +4,69 @@ import org.pneditor.petrinet.AbstractArc;
 import org.pneditor.petrinet.AbstractNode;
 import org.pneditor.petrinet.ResetArcMultiplicityException;
 
-public class AdapterArc extends AbstractArc {
+import classesPetriNet.Arc;
+import classesPetriNet.InArc;
+import classesPetriNet.Zero;
 
+public class AdapterArc extends AbstractArc {
+	private Arc arc;
+	private AdapterPlace adapterPlace;
+	private AdapterTransition adapterTransition;
+
+	public AdapterArc(Arc arc, AdapterPlace place, AdapterTransition transition) {
+		this.arc=arc;
+		this.adapterPlace=place;
+		this.adapterTransition=transition;
+	}
 	@Override
 	public AbstractNode getSource() {
-		// TODO Auto-generated method stub
-		return null;
+		if(this.arc instanceof InArc) {
+			return this.adapterPlace;
+		}
+		else {
+			return this.adapterTransition;
+		}
 	}
 
 	@Override
 	public AbstractNode getDestination() {
-		// TODO Auto-generated method stub
-		return null;
+		if(this.arc instanceof InArc) {
+			return this.adapterTransition;
+		}
+		else {
+			return this.adapterPlace;
+		}
 	}
 
 	@Override
 	public boolean isReset() {
 		// TODO Auto-generated method stub
-		return false;
+		return this.arc instanceof Void;
 	}
 
 	@Override
 	public boolean isRegular() {
 		// TODO Auto-generated method stub
-		return false;
+		return (this.arc instanceof InArc)
+				&& !this.isRegular()
+				&& !this.isReset();
 	}
 
 	@Override
 	public boolean isInhibitory() {
 		// TODO Auto-generated method stub
-		return false;
+		return this.arc instanceof Zero;
 	}
 
 	@Override
 	public int getMultiplicity() throws ResetArcMultiplicityException {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.arc.getWeight() ;
 	}
 
 	@Override
 	public void setMultiplicity(int multiplicity) throws ResetArcMultiplicityException {
-		// TODO Auto-generated method stub
+		this.arc.setWeight(multiplicity);
 
 	}
 

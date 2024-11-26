@@ -31,4 +31,7 @@ public class AdapterPlace extends AbstractPlace {
 		place.setTokens(tokens);
 	}
 
+	public Place getPlace() {
+		return place;
+	}
 }

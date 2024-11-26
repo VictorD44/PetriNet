@@ -4,6 +4,12 @@ import org.pneditor.petrinet.AbstractArc;
 import org.pneditor.petrinet.AbstractNode;
 import org.pneditor.petrinet.ResetArcMultiplicityException;
 
+import org.pneditor.petrinet.models.imta.Arc;
+import org.pneditor.petrinet.models.imta.InArc;
+import org.pneditor.petrinet.models.imta.Void;
+import org.pneditor.petrinet.models.imta.Zero;
+import org.pneditor.petrinet.models.imta.OutArc;
+
 import classesPetriNet.Arc;
 import classesPetriNet.InArc;
 import classesPetriNet.Zero;

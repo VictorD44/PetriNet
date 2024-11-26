@@ -1,12 +1,12 @@
-package adaptateur;
+package org.pneditor.petrinet.adapters.imta;
 
 import org.pneditor.petrinet.AbstractArc;
 import org.pneditor.petrinet.AbstractNode;
 import org.pneditor.petrinet.ResetArcMultiplicityException;
 
-import classesPetriNet.Arc;
-import classesPetriNet.InArc;
-import classesPetriNet.Zero;
+import org.pneditor.petrinet.models.imta.Arc;
+import org.pneditor.petrinet.models.imta.InArc;
+import org.pneditor.petrinet.models.imta.Zero;
 
 public class AdapterArc extends AbstractArc {
 	private Arc arc;
@@ -41,7 +41,7 @@ public class AdapterArc extends AbstractArc {
 	@Override
 	public boolean isReset() {
 		// TODO Auto-generated method stub
-		return this.arc instanceof classesPetriNet.Void; //Problème avec classe Void déjà presente en Java
+		return this.arc instanceof org.pneditor.petrinet.models.imta.Void; //Problème avec classe Void déjà presente en Java
 	}
 
 	@Override

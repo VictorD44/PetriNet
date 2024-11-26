@@ -1,7 +1,6 @@
 package classesPetriNet;
 import java.util.ArrayList;
 
-import org.pneditor.petrinet.models.imta.InArc;
 
 /**
  * Class that represents a transition

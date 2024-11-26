@@ -8,6 +8,7 @@ import org.pneditor.petrinet.PetriNetInterface;
 import org.pneditor.petrinet.ResetArcMultiplicityException;
 import org.pneditor.petrinet.UnimplementedCaseException;
 import org.pneditor.petrinet.models.imta.PetriNet;
+import classesPetriNet.PetriNet;
 
 public class AdapterPetriNet extends PetriNetInterface {
 	private PetriNet petrinet = new PetriNet();

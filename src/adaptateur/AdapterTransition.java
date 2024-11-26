@@ -2,6 +2,7 @@ package adaptateur;
 
 import org.pneditor.petrinet.AbstractTransition;
 import org.pneditor.petrinet.models.imta.Transition;
+import classesPetriNet.Transition;
 
 public class AdapterTransition extends AbstractTransition {
 	private Transition transition;
@@ -12,6 +13,6 @@ public class AdapterTransition extends AbstractTransition {
 	}
 
 	public Transition getTransition() {
-		return transition;
+		return this.transition;
 	}
 }

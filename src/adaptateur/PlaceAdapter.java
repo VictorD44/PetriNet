@@ -3,12 +3,10 @@ package adaptateur;
 import org.pneditor.petrinet.AbstractPlace;
 import org.pneditor.petrinet.models.imta.Place;
 
-import classesPetriNet.Place;
-
-public class AdapterPlace extends AbstractPlace {
+public class PlaceAdapter extends AbstractPlace {
 	private Place place;
 	
-	public AdapterPlace(String label) {
+	public PlaceAdapter(String label) {
 		super(label);
 		place = new Place(0);
 	}

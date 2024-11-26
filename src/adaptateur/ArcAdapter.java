@@ -1,4 +1,4 @@
-package org.pneditor.petrinet.adapters.imta;
+package adaptateur;
 
 import org.pneditor.petrinet.AbstractArc;
 import org.pneditor.petrinet.AbstractNode;
@@ -8,12 +8,12 @@ import org.pneditor.petrinet.models.imta.Arc;
 import org.pneditor.petrinet.models.imta.InArc;
 import org.pneditor.petrinet.models.imta.Zero;
 
-public class AdapterArc extends AbstractArc {
+public class ArcAdapter extends AbstractArc {
 	private Arc arc;
-	private AdapterPlace adapterPlace;
-	private AdapterTransition adapterTransition;
+	private PlaceAdapter adapterPlace;
+	private TransitionAdapter adapterTransition;
 
-	public AdapterArc(Arc arc, AdapterPlace place, AdapterTransition transition) {
+	public ArcAdapter(Arc arc, PlaceAdapter place, TransitionAdapter transition) {
 		this.arc=arc;
 		this.adapterPlace=place;
 		this.adapterTransition=transition;
@@ -68,6 +68,10 @@ public class AdapterArc extends AbstractArc {
 	public void setMultiplicity(int multiplicity) throws ResetArcMultiplicityException {
 		this.arc.setWeight(multiplicity);
 
+	}
+	
+	public Arc getArc() {
+		return this.arc;
 	}
 
 }

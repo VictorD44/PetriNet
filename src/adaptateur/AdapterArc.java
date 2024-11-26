@@ -41,7 +41,7 @@ public class AdapterArc extends AbstractArc {
 	@Override
 	public boolean isReset() {
 		// TODO Auto-generated method stub
-		return this.arc instanceof Void;
+		return this.arc instanceof classesPetriNet.Void; //Problème avec classe Void déjà presente en Java
 	}
 
 	@Override

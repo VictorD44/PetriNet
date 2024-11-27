@@ -18,7 +18,6 @@ public class PetriNetAdapter extends PetriNetInterface {
 		PlaceAdapter place = new PlaceAdapter(null);
 		petrinet.addPlace(place.getPlace());
 		return place;
-		
 	}
 
 	@Override
@@ -35,9 +34,11 @@ public class PetriNetAdapter extends PetriNetInterface {
 		if (source instanceof org.pneditor.petrinet.adapters.imta.PlaceAdapter) {
 			arc_var = new InArc(1,((PlaceAdapter)source).getPlace(),((TransitionAdapter)destination).getTransition());
 			arc = new ArcAdapter(arc_var,(PlaceAdapter)source,(TransitionAdapter)destination);
+			((TransitionAdapter)destination).getTransition().addInArc((InArc)arc_var);
 		} else {
 			arc_var = new OutArc(1,((PlaceAdapter)destination).getPlace(),((TransitionAdapter)source).getTransition());
 			arc = new ArcAdapter(arc_var,(PlaceAdapter)destination,(TransitionAdapter)source);
+			((TransitionAdapter)source).getTransition().addOutArc((OutArc)arc_var);
 		}
 		petrinet.addArc(arc_var);
 		return arc;

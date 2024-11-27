@@ -51,6 +51,7 @@ public class PetriNetAdapter extends PetriNetInterface {
 		Zero arc_var = new Zero(((PlaceAdapter)place).getPlace(),((TransitionAdapter)transition).getTransition());
 		AbstractArc arc = new ArcAdapter(arc_var,(PlaceAdapter)place,(TransitionAdapter)transition);
 		petrinet.addArc(arc_var);
+		((TransitionAdapter)transition).getTransition().addInArc((InArc)arc_var);
 		return arc;
 	}
 
@@ -60,6 +61,7 @@ public class PetriNetAdapter extends PetriNetInterface {
 		Void arc_var = new Void(((PlaceAdapter)place).getPlace(),((TransitionAdapter)transition).getTransition());
 		AbstractArc arc = new ArcAdapter(arc_var,(PlaceAdapter)place,(TransitionAdapter)transition);
 		petrinet.addArc(arc_var);
+		((TransitionAdapter)transition).getTransition().addInArc((InArc)arc_var);
 		return arc;
 	}
 

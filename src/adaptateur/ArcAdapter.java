@@ -48,7 +48,7 @@ public class ArcAdapter extends AbstractArc {
 	public boolean isRegular() {
 		// TODO Auto-generated method stub
 		return (this.arc instanceof InArc)
-				&& !this.isRegular()
+				&& !this.isInhibitory()
 				&& !this.isReset();
 	}
 

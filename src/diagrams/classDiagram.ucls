@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="classesPetriNet.InArc" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/InArc.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="175" x="175" y="910"/>    
+    <position height="136" width="180" x="322" y="819"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="classesPetriNet.Place" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/Place.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="196" width="156" x="92" y="674"/>    
+    <position height="-1" width="-1" x="230" y="722"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="classesPetriNet.Void" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/Void.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="152" x="92" y="1074"/>    
+    <position height="136" width="157" x="239" y="983"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="classesPetriNet.Arc" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/Arc.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="213" width="168" x="174" y="421"/>    
+    <position height="243" width="173" x="321" y="321"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="classesPetriNet.OutArc" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/OutArc.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="106" width="186" x="390" y="910"/>    
+    <position height="118" width="191" x="537" y="819"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="classesPetriNet.PetriNet" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/PetriNet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="250" width="402" x="174" y="131"/>    
+    <position height="262" width="407" x="321" y="40"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="classesPetriNet.Transition" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/Transition.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="142" width="163" x="363" y="674"/>    
+    <position height="-1" width="-1" x="732" y="647"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="classesPetriNet.Zero" project="PetriNet" 
     file="/PetriNet/src/classesPetriNet/Zero.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="124" width="152" x="284" y="1074"/>    
+    <position height="136" width="157" x="431" y="983"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -74,79 +74,107 @@
     </display>  
   </class>  
   <generalization id="9">    
-    <bendpoint x="278" y="674"/>    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="10">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="11" name="inArc"/>      
-      <multiplicity id="12" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="13">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <generalization id="14">    
+  <generalization id="10">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <association id="15">    
-    <bendpoint x="142" y="421"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="16" name="places"/>      
-      <multiplicity id="17" minimum="0" maximum="2147483647"/>    
+  <association id="11">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="12" name="place">        
+        <position height="20" width="39" x="264" y="593"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="1">        
+        <position height="18" width="27" x="314" y="599"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="18">    
+  <association id="14">    
+    <bendpoint x="289" y="330"/>    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="19" name="arcs"/>      
-      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
+      <attribute id="15" name="places">        
+        <position height="20" width="46" x="199" y="566"/>      
+      </attribute>      
+      <multiplicity id="16" minimum="0" maximum="2147483647">        
+        <position height="18" width="25" x="220" y="591"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="17">    
+    <bendpoint x="519" y="330"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="18" name="transitions">        
+        <position height="0" width="0" x="138" y="-13"/>      
+      </attribute>      
+      <multiplicity id="19" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="138" y="-13"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="20">    
+    <bendpoint x="446" y="583"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="21">    
+    <bendpoint x="425" y="583"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="22">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="23" name="arcs">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="24" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="21">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="22" name="transition"/>      
-      <multiplicity id="23" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="24">    
-    <bendpoint x="372" y="421"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="25" name="transitions"/>      
-      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
+  <association id="25">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="28" name="outArc"/>      
-      <multiplicity id="29" minimum="0" maximum="2147483647"/>    
+      <attribute id="26" name="inArc">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="27" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="29" name="transition">        
+        <position height="0" width="0" x="138" y="-13"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="1">        
+        <position height="0" width="0" x="138" y="-13"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="32" name="outArc">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="30">    
-    <bendpoint x="299" y="674"/>    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </generalization>  
-  <association id="31">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="32" name="place"/>      
-      <multiplicity id="33" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

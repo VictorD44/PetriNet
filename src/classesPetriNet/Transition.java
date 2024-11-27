@@ -1,7 +1,6 @@
 package classesPetriNet;
 import java.util.ArrayList;
 
-
 /**
  * Class that represents a transition
  */
@@ -74,5 +73,14 @@ public class Transition {
 			res &= a.canStep();
 		}
 		return res;
+	}
+	
+	/**
+	 * Method that remove an Arc from the transition
+	 * @param a (an arc)
+	 */
+	public void removeArc(Arc a) {
+		this.inArc.remove(a);
+		this.outArc.remove(a);
 	}
 }

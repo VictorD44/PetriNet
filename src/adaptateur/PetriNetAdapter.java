@@ -10,7 +10,6 @@ import org.pneditor.petrinet.UnimplementedCaseException;
 import org.pneditor.petrinet.models.imta.*;
 import org.pneditor.petrinet.models.imta.Void;
 
-import classesPetriNet.Zero;
 
 public class PetriNetAdapter extends PetriNetInterface {
 	private PetriNet petrinet = new PetriNet();
@@ -78,6 +77,7 @@ public class PetriNetAdapter extends PetriNetInterface {
 	@Override
 	public void removeArc(AbstractArc arc) {
 		petrinet.removeArc(((ArcAdapter)arc).getArc());
+		((ArcAdapter)arc).getArc().getTransition().removeArc(((ArcAdapter)arc).getArc());
 	}
 
 	@Override

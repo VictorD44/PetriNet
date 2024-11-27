@@ -20,7 +20,7 @@ public class Zero extends InArc{
 	 */
 	@Override
 	public boolean canStep() {
-		return this.getPlace().getTokens() == 0; //if there is no token, we can make a step
+		return this.getPlace().getTokens() < this.getWeight(); //if there is no token, we can make a step
 	}
 	
 	/**

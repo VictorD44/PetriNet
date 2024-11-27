@@ -10,6 +10,8 @@ import org.pneditor.petrinet.UnimplementedCaseException;
 import org.pneditor.petrinet.models.imta.*;
 import org.pneditor.petrinet.models.imta.Void;
 
+import classesPetriNet.Zero;
+
 public class PetriNetAdapter extends PetriNetInterface {
 	private PetriNet petrinet = new PetriNet();
 	
@@ -47,7 +49,7 @@ public class PetriNetAdapter extends PetriNetInterface {
 	@Override
 	public AbstractArc addInhibitoryArc(AbstractPlace place, AbstractTransition transition)
 			throws UnimplementedCaseException {
-		Void arc_var = new Void(((PlaceAdapter)place).getPlace(),((TransitionAdapter)transition).getTransition());
+		Zero arc_var = new Zero(((PlaceAdapter)place).getPlace(),((TransitionAdapter)transition).getTransition());
 		AbstractArc arc = new ArcAdapter(arc_var,(PlaceAdapter)place,(TransitionAdapter)transition);
 		petrinet.addArc(arc_var);
 		return arc;
@@ -56,7 +58,7 @@ public class PetriNetAdapter extends PetriNetInterface {
 	@Override
 	public AbstractArc addResetArc(AbstractPlace place, AbstractTransition transition)
 			throws UnimplementedCaseException {
-		Zero arc_var = new Zero(((PlaceAdapter)place).getPlace(),((TransitionAdapter)transition).getTransition());
+		Void arc_var = new Void(((PlaceAdapter)place).getPlace(),((TransitionAdapter)transition).getTransition());
 		AbstractArc arc = new ArcAdapter(arc_var,(PlaceAdapter)place,(TransitionAdapter)transition);
 		petrinet.addArc(arc_var);
 		return arc;

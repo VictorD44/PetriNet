@@ -1,28 +1,39 @@
-PNEditor (Petri Net editor)
-========
+# Fil Rouge MAPD
 
-The original PNE can be downloaded from [www.pneditor.org](http://www.pneditor.org/)
+Implementation of a Petri Net
 
-This instance is the result of a student project by Joris Thaveau for teaching purpose.
+## Authors
 
-It is a simplified Petri net editor that allows the editing of many PetriNet models.
+Arthur LOIZEAU
 
-To use:
+Victor DANTAS
 
-1. Run org.pneditor.editor.Main as a Java application
-2. Select the model used (the menu scans the org.pneditor.petrinet.adapters folder to build a list of available models and adapters). initial and imta are available. Places and transitions are displayed in different ways.
-3. Edit the PetriNet and fire transitions.
+## Code version
 
-You may experiment some unexpected exceptions. Especially if you mix models.
+This project run with Eclipse 4.33.0 and a JRE build 17.0.13
 
-The pedagogical approach consists in:
+## Starting 
 
-1. Develop your own PetriNet model in an independent project/environment - with no GUI, just the ''business'' view
-2. Pack it as a jar, and let it be visible in the path
-3. Develop an Adapter in the org.pneditor.petrinet.adapters folder of PNE to make your model editable
+You can create your own PetriNet in the main method in **src.classesPetriNet.PetriNet** then execute it.
 
-The adapter may be simple or complex depending on the "distance" between your model and the one expected by PNE.
+## Tests
 
-Code license: [GNU GPL v3](http://www.gnu.org/licenses/gpl.html)
+Tests are integrated in 2 ways :
 
-Requirements: Java SE 8+
+1- Each method contains tests for both the inputs and outputs
+
+2- Each class is tested via JUnit tests
+
+In order to run the tests, you can execute the different classes in the **src.test** package as JUnit Test
+
+
+Code implémentant un réseau de Pétri.
+Pour l'exécuter, il faut lancer la classe PetriNet en construisant le réseau dans le main grâce aux diverses méthodes de PetriNet et des classes des objets (Transition, Place, Arc...).
+Ce code fonctionne avec eclipse 4.33.0 sous JRE build 17.0.13
+Des tests sont intégrés au modèle de deux manières :
+  1- chaque méthode contient des tests sur les variables d'entrée et/ou sur le résultat de sortie
+  2- chaque classe est testé à l'aide de fichiers JUnit dans le package test (les sous-classes de Arc sont testés directement dans TestArc)
+
+Des modifications légères ont eu lieu entre la conception et l'implémentation :
+  -changement de noms de variables/méthodes/classes afin de respecter les règles de bon usage
+  -ajout de constantes minimales afin de respecter les règles de bon usage~~

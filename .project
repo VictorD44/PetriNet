@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>PetriNet</name>
+=======
+	<name>mapd-pne-code</name>
+>>>>>>> branch 'main' of https://github.com/VictorD44/PetriNet
 	<comment></comment>
 	<projects>
 	</projects>

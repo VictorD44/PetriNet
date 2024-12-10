@@ -14,7 +14,6 @@ This project run with Eclipse 4.33.0 and a JRE build 17.0.13
 
 ## Starting 
 
-<<<<<<< HEAD
 You can create your own PetriNet in the main method in **src.classesPetriNet.PetriNet** then execute it.
 
 ## Tests

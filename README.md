@@ -29,7 +29,10 @@ In order to run the tests, you can execute the different classes in the **org.pn
 ## Modifications
 
 Minor changes occurred between design and implementation :
+
   -changing the names of variables/methods/classes in order to respect the rules of good usage
+  
   -added minimal constants to comply with the rules of good use
+  
   -added useful getters for adaptation
 
